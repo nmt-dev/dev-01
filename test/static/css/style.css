@@ -1,0 +1,331 @@
+/* Google Webフォントを利用設定するCSSをインポート */
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps);
+
+/* body要素(全体) */
+body
+{
+    /* 文字色を白に */
+    color: #FBE9E7;
+    /* 背景色を黒に */
+    background-color: #212121;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+/* id="clock_frame" のdiv要素 */
+div#clock_frame
+{
+    /* 横幅を親要素であるbodyの100%(同じ幅)にする */
+    width: 100%;
+}
+
+/* span要素のデフォルト */
+span
+{
+    /* 本来はインライン要素であるspanをブロック要素として扱う */
+    display: block;
+    /* ここでは親要素であるdivの内部で右に寄せて配置させる */
+    float: right;
+    /* 横幅を親要素であるdivの85%にする */
+    width: 85%;
+}
+
+/* id="clock_date" のspan要素 */
+span#clock_date
+{
+    /* この要素の中におけるテキストを右詰めにする デフォルト値のtext-align:leftを上書き */
+    text-align: right;
+    /* フォントの大きさを親要素であるdivで設定されたサイズ(px)の0.5倍にする */
+    font-size: 0.5em;
+    /* 右のパディングの幅を親要素であるdivで設定されたフォントサイズ(px)の0.5倍にする */
+    padding-right: 0.5em;
+}
+
+/* id="clock_time" のspan要素 */
+span#clock_time
+{
+    /* フォントの大きさを親要素であるdivで設定されたサイズ(px)の2倍にする */
+    font-size: 2em;
+}
+
+
+nav ul {
+  list-style: none;
+  list-style-image: none; }
+/*
+.row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 80rem; }
+.row:before, .row:after {
+    content: " ";
+    display: table; }
+.row:after {
+    clear: both; }
+@media only screen and (max-width: 40em) {
+    .row.small-collapse > .column,
+    .row.small-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+    .row.small-collapse .row {
+    margin-left: 0;
+    margin-right: 0; } }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .row.medium-collapse > .column,
+    .row.medium-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+    .row.medium-collapse .row {
+    margin-left: 0;
+    margin-right: 0; } }
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    .row.large-collapse > .column,
+    .row.large-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+    .row.large-collapse .row {
+    margin-left: 0;
+    margin-right: 0; } }
+.row.expand {
+    max-width: none; }
+
+.row .row {
+    width: auto;
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none; }
+.row .row:before, .row .row:after {
+    content: " ";
+    display: table; }
+.row .row:after {
+    clear: both; }
+.row .row.collapse {
+    width: auto;
+    margin: 0;
+    max-width: none; }
+.row .row.collapse:before, .row .row.collapse:after {
+    content: " ";
+    display: table; }
+.row .row.collapse:after {
+    clear: both; }
+*/
+
+.nav-primary {
+    margin: 0;
+    /*
+    padding: 100px 0 0 0;
+    */
+    padding: 200px 0 0 0;
+    border-bottom: 3px solid #3a3a3a; }
+.nav-primary li {
+    border-top: 3px solid #3a3a3a;
+    /*
+    border-bottom: 3px solid #3f566a; }
+    */
+    border-bottom: 3px solid #4d4c4c; }
+.nav-primary li a {
+    display: block;
+    color: #f0f0f0;
+    font-size: 5.0em;
+    /*
+    padding: 10px 15px; }
+    */
+    padding: 35px 40px; }
+
+.nav-primary li a:hover {
+    background-color: rgba(31, 192, 142, 0.8); }
+/*
+@media only screen and (min-width: 64.063em) {
+    [data-position="top"] .nav-primary {
+        padding: 25px 0;
+        border: none; }
+    [data-position="top"] .nav-primary li {
+        display: inline;
+        border: none;
+        margin-right: 10px; }
+    [data-position="top"] .nav-primary li a {
+        display: inline-block; } }
+
+.row.collapse .columns {
+    padding-left: 0;
+    padding-right: 0; }
+
+@media only screen and (min-width: 64.063em) {
+    .large-push-0 {
+        position: relative;
+        left: 0%;
+        right: auto; }
+    .large-pull-0 {
+        position: relative;
+        right: 0%;
+        left: auto; }
+    .large-push-1 {
+        position: relative;
+        left: 8.33333%;
+        right: auto; }
+    .large-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; }
+    .large-push-2 {
+        position: relative;
+        left: 16.66667%;
+        right: auto; }
+    .large-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; }
+    .large-push-3 {
+        position: relative;
+        left: 25%;
+        right: auto; }
+    .large-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; }
+    .large-push-4 {
+        position: relative;
+        left: 33.33333%;
+        right: auto; }
+    .large-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; }
+    .large-push-5 {
+        position: relative;
+        left: 41.66667%;
+        right: auto; }
+    .large-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; }
+    .large-push-6 {
+        position: relative;
+        left: 50%;
+        right: auto; }
+    .large-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; }
+    .large-push-7 {
+        position: relative;
+        left: 58.33333%;
+        right: auto; }
+    .large-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; }
+    .large-push-8 {
+        position: relative;
+        left: 66.66667%;
+        right: auto; }
+    .large-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; }
+    .large-push-9 {
+        position: relative;
+        left: 75%;
+        right: auto; }
+    .large-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; }
+    .large-push-10 {
+        position: relative;
+        left: 83.33333%;
+        right: auto; }
+    .large-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; }
+    .large-push-11 {
+        position: relative;
+        left: 91.66667%;
+        right: auto; }
+    .large-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; }
+    .column,
+    .columns {
+        position: relative;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        float: left; }
+    .large-1 {
+        width: 8.33333%;  }
+    .large-2 {
+        width: 16.66667%; }
+    .large-3 {
+        width: 25%; }
+    .large-4 {
+        width: 33.33333%; }
+    .large-5 {
+        width: 41.66667%; }
+    .large-6 {
+        width: 50%; }
+    .large-7 {
+        width: 58.33333%; }
+    .large-8 {
+        width: 66.66667%; }
+    .large-9 {
+        width: 75%; }
+    .large-10 {
+        width: 83.33333%; }
+    .large-11 {
+        width: 91.66667%; }
+    .large-12 {
+        width: 100%; }
+    [class*="column"] + [class*="column"]:last-child {
+        float: right; }
+    [class*="column"] + [class*="column"].end {
+        float: left; }
+    .large-offset-0 {
+        margin-left: 0% !important; }
+    .large-offset-1 {
+        margin-left: 8.33333% !important; }
+    .large-offset-2 {
+        margin-left: 16.66667% !important; }
+    .large-offset-3 {
+        margin-left: 25% !important; }
+    .large-offset-4 {
+        margin-left: 33.33333% !important; }
+    .large-offset-5 {
+        margin-left: 41.66667% !important; }
+    .large-offset-6 {
+        margin-left: 50% !important; }
+    .large-offset-7 {
+        margin-left: 58.33333% !important; }
+    .large-offset-8 {
+        margin-left: 66.66667% !important; }
+    .large-offset-9 {
+        margin-left: 75% !important; }
+    .large-offset-10 {
+        margin-left: 83.33333% !important; }
+    .large-offset-11 {
+        margin-left: 91.66667% !important; }
+    .large-reset-order {
+        margin-left: 0;
+        margin-right: 0;
+        left: auto;
+        right: auto;
+        float: left; }
+    .column.large-centered,
+    .columns.large-centered {
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important; }
+    .column.large-uncentered,
+    .columns.large-uncentered {
+        margin-left: 0;
+        margin-right: 0;
+        float: left !important; }
+    .column.large-uncentered.opposite,
+    .columns.large-uncentered.opposite {
+        float: right; } }
+*/

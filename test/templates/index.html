@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 文字コードの宣言 -->
+    <meta charset="UTF-8">
+    <!-- ページのタイトル(ブラウザのタイトルバーに表示) -->
+    <title>jsClock-simple</title>
+    <!-- スタイルシート(CSS)読み込み -->
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/pure-drawer.css">
+    <!-- JavaScript読み込み -->
+    <script src="./static/js/clock.js"></script>
+</head>
+
+<body>
+    <div class="pure-container" data-effect="pure-effect-bounce">
+    <!--<div class="pure-container" data-effect="pure-effect-reveal">-->
+        <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+        <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left">
+            <span class="pure-toggle-icon"></span>
+        </label>
+    
+        <nav class="pure-drawer" data-position="left">
+            <div class="row collapse">
+                <!--<div class="large-12 columns">-->
+                    <ul class="nav-primary">
+                        <li><a>Alerm</a></li>
+                        <li><a>Network</a></li>
+                        <li><a>Setting</a></li>
+                    </ul>
+                <!--</div>-->
+            </div>
+        </nav>
+
+        <div class="pure-pusher-container">
+            <div class="pure-pusher">
+                <div class="inner">    
+                    <!-- ここがコンテンツ -->
+                    <!-- 時計枠 -->
+                    <div id="clock_frame">
+                        <!-- 日付部分 -->
+                        <span id="clock_date"></span>
+                        <!-- 時刻部分 -->
+                        <span id="clock_time"></span>
+                    </div>        
+                </div>
+            </div>
+        </div>
+        <!-- ボタンの位置をleft,top,rightから選べます。 -->
+        <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+    </div>
+</body>
+
+</html>
